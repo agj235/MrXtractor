@@ -1,0 +1,67 @@
+<head>
+    <link rel="stylesheet" href="/style.css" />
+
+</head>
+<nav style="background: #000; padding: 20px; text-align: center;">
+  <a href="index.html" style="margin: 0 15px; color: white; text-decoration: none;">Home</a>
+  <a href="about.html" style="margin: 0 15px; color: white; text-decoration: none;">About</a>
+  <a href="gallery.html" style="margin: 0 15px; color: white; text-decoration: none;">Gallery</a>
+  <a href="booking.html" style="margin: 0 15px; color: #e60000; text-decoration: none;">Book Now</a>
+</nav>
+
+<section style="padding: 60px; max-width: 800px; margin: auto; color: white;">
+  <h1 style="color: #e60000;">About Us</h1>
+  <p>
+    At Mr. Xtractor Auto Detailing LLC, we bring over a decade of professional experience in high-end vehicle detailing.
+    Our mission is simple: deliver unmatched quality and convenience to car owners who demand perfection.
+  </p>
+  <p>
+    Whether it’s a daily driver or a luxury showpiece, we treat every vehicle with white-glove care, using
+    premium products and precise techniques to restore and protect your car’s beauty.
+  </p>
+  <h3 style="color: #e60000;">Why Choose Us?</h3>
+  <ul>
+    <li>✔️ Mobile convenience — we come to you</li>
+    <li>✔️ Fully licensed and insured</li>
+    <li>✔️ Eco-friendly, high-end detailing products</li>
+    <li>✔️ Trusted by luxury car owners</li>
+  </ul>
+</section>
+
+<section id="testimonials" style="padding: 60px 20px; background: #111;">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial-container">
+    <div class="testimonial active">
+      <p>"Nery did an excellent job. Had been many months since a proper interior deep clean in my jeep, including quite a bit of dog hair. Car hasn’t looked this nice since I bought it. Also friendly, professional, and super easy to schedule."</p>
+      <h4>– Zoe Keskey</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Mr. Xtractor did an amazing job brining my car back to life. I was looking for a professional to come detail my car that could do it in my apartments garage and he made it happen. He was on time, quick, and even cleaned my exhaust tips and got them back to looking like brand new chrome. Definitely going to get it done regularly by now."</p>
+      <h4>– Marty McFly</h4>
+    </div>
+    <div class="testimonial">
+      <p>"I recently had my vehicle detailed and I couldn’t be more impressed with the results! From start to finish, the service was professional, thorough, and exceeded my expectations in every way. The exterior shine is immaculate, and they managed to remove stubborn spots I thought were permanent. Great communication and overall work."</p>
+      <h4>– Giselle Membreno</h4>
+    </div>
+  </div>
+</section>
+<script>
+  let currentTestimonial = 0;
+  const testimonials = document.querySelectorAll('.testimonial');
+
+  function rotateTestimonials() {
+    testimonials.forEach((t, i) => {
+      t.classList.remove('active');
+    });
+
+    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+    testimonials[currentTestimonial].classList.add('active');
+  }
+
+  // Initial activation
+  testimonials[0].classList.add('active');
+
+  // Rotate every 5 seconds
+  setInterval(rotateTestimonials, 5000);
+</script>
+
