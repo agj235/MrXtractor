@@ -50,7 +50,7 @@ nav a:hover {
 }
 
 header {
-  background: url('assets/logo.jpeg') center/cover no-repeat;
+  background: url('/MrXtractor/logo.jpeg') center/cover no-repeat;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -216,5 +216,6 @@ footer {
   opacity: 1;
   position: relative;
 }
+
 
 
